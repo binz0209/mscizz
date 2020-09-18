@@ -1,3 +1,4 @@
+import os
 import asyncio
 import functools
 import itertools
@@ -484,14 +485,13 @@ class Music(commands.Cog):
 bot = commands.Bot(description='Một bot nhạc khác.', command_prefix=['B', 'b'])
 bot.add_cog(Music(bot))
 
-
-@bot.event
-async def on_ready():
-    print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
-
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel(734727263916130385)
     await channel.send("<a:DCC_zloading:747301624615272519> Chào mừng  " + member.mention + " đến với <a:DCC_zloading:747301624615272519>\n<a:DCC_zchecked2:747301626691321926>**DESTRUCTIVE CREATIONS | Community**<a:DCC_zchecked2:747301626691321926>\n<a:DCC_zchamthan:749879179386028123><#734919993073991711> để lấy màu siêu sịn\n<a:DCC_zchamthan:749879179386028123><#736992698619265154> để được quyền lợi\n<a:DCC_zchamthan:749879179386028123><#736991958467215370> để tránh bay màu\n                            <a:DCC_zwlc1:749879098817380362><a:DCC_zwlc2:749879144468185159>")
+
+@bot.event
+async def on_ready():
+    print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
 
 bot.run(os.environ['token'])
