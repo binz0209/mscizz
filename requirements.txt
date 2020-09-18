@@ -1,0 +1,11 @@
+ffmpeg
+discord
+PyNaCl
+websockets
+pip
+youtube_dl==2020.07.28
+colorlog
+cffi --only-binary all; 
+chardet
+opuslib
+discord.py[voice]
