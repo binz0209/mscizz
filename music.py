@@ -367,9 +367,6 @@ class Music(commands.Cog):
 
     @commands.command(name='skip')
     async def _skip(self, ctx: commands.Context):
-        """Vote to skip a song. The requester can automatically skip.
-        3 skip votes are needed for the song to be skipped.
-        """
 
         if not ctx.voice_state.is_playing:
             return await ctx.send('Hiện không phát bất kỳ bài nhạc nào...')
@@ -450,12 +447,6 @@ class Music(commands.Cog):
 
     @commands.command(name='play', aliases=['p'])
     async def _play(self, ctx: commands.Context, *, search: str):
-        """Plays a song.
-        If there are songs in the queue, this will be queued until the
-        other songs finished playing.
-        This command automatically searches from various sites if no URL is provided.
-        A list of these sites can be found here: https://rg3.github.io/youtube-dl/supportedsites.html
-        """
 
         if not ctx.voice_state.voice:
             await ctx.invoke(self._join)
@@ -489,59 +480,6 @@ bot.add_cog(Music(bot))
 async def on_member_join(member):
     channel = bot.get_channel(734727263916130385)
     await channel.send("<a:DCC_zloading:747301624615272519> Chào mừng  " + member.mention + " đến với <a:DCC_zloading:747301624615272519>\n<a:DCC_zchecked2:747301626691321926>**DESTRUCTIVE CREATIONS | Community**<a:DCC_zchecked2:747301626691321926>\n<a:DCC_zchamthan:749879179386028123><#734919993073991711> để lấy màu siêu sịn\n<a:DCC_zchamthan:749879179386028123><#736992698619265154> để được quyền lợi\n<a:DCC_zchamthan:749879179386028123><#736991958467215370> để tránh bay màu\n                            <a:DCC_zwlc1:749879098817380362><a:DCC_zwlc2:749879144468185159>")
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    if message.content.startswith('bboost'):
-        be = message.mentions[0]
-        await message.channel.send("<a:DCC_znitroboost:747305024501317672> Cảm ơn " + be.mention + " đã nâng cấp máy chủ **Destructive Creations | Community** <a:DCC_znitroboost:747305024501317672>")
-
-
-    if 'ok' in message.content:
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if 'Ok' in message.content:
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if 'OK' in message.content:
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-
-
-    if 'yeu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'love' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'yêu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'iu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'luv' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-
-    if 'chém' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'chem' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'chếm' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-
-    if 'binz' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Binz' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'bé tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Bé Tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'be tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Be tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Be Tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Bé tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
 
 @bot.event
 async def on_ready():
