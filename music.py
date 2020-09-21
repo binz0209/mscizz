@@ -485,11 +485,11 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if 'ok' in message.content:
+    if message.content == 'ok':
         await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if 'Ok' in message.content:
+    if message.content == 'Ok':
         await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if 'OK' in message.content:
+    if message.content == 'OK':
         await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
 
 
@@ -510,17 +510,15 @@ async def on_message(message):
         await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
     if 'chếm' in message.content:
         await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'Chém' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'Chem' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'Chếm' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
 
-    if 'binz' in message.content:
+    if message.content == 'binz':
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Binz' in message.content:
+        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890>                          Binz from midside                         <a:DCC_zdapchetmene:747301627890892890>
+<a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942> Mười sáu tuổi chưa từng thông đít ai <a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942>''')
+    if message.content == 'Binz':
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
+        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890>                          Binz from midside                         <a:DCC_zdapchetmene:747301627890892890>
+<a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942> Mười sáu tuổi chưa từng thông đít ai <a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942>''')
     if 'bé tư' in message.content:
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
     if 'Bé Tư' in message.content:
