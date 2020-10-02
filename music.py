@@ -513,12 +513,10 @@ async def on_message(message):
 
     if message.content == 'binz':
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890>                          Binz from midside                         <a:DCC_zdapchetmene:747301627890892890>
-<a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942> Mười sáu tuổi chưa từng thông đít ai <a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942>''')
+        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890> Bé Tư Chém <a:DCC_zdapchetmene:747301627890892890>''')
     if message.content == 'Binz':
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890>                          Binz from midside                         <a:DCC_zdapchetmene:747301627890892890>
-<a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942> Mười sáu tuổi chưa từng thông đít ai <a:DCC_zxoay2:747301628054470756><a:DCC_zxoay1:747301627160952942>''')
+        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890> Bé Tư Chém <a:DCC_zdapchetmene:747301627890892890>''')
     if 'bé tư' in message.content:
         await message.add_reaction('<:DCC_sohai2:747298047632867438>')
     if 'Bé Tư' in message.content:
