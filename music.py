@@ -473,7 +473,7 @@ class Music(commands.Cog):
                 raise commands.CommandError('Bot đã có trong kênh thoại.')
 
 
-bot = commands.Bot(description='Một bot nhạc khác.', command_prefix=['B', 'b'])
+bot = commands.Bot(description='Một bot nhạc cô đơn nào đó.', command_prefix=['B', 'b'])
 bot.add_cog(Music(bot))
 
 @bot.event
