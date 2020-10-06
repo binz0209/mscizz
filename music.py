@@ -479,7 +479,12 @@ bot.add_cog(Music(bot))
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel(734727263916130385)
-    await channel.send("<a:DCC_zloading:747301624615272519> Chào mừng  " + member.mention + " đến với <a:DCC_zloading:747301624615272519>\n<a:DCC_zchecked2:747301626691321926>**DESTRUCTIVE CREATIONS | Community**<a:DCC_zchecked2:747301626691321926>\n<a:DCC_zchamthan:749879179386028123><#734919993073991711> để lấy màu siêu sịn\n<a:DCC_zchamthan:749879179386028123><#736992698619265154> để được quyền lợi\n<a:DCC_zchamthan:749879179386028123><#736991958467215370> để tránh bay màu\n                            <a:DCC_zwlc1:749879098817380362><a:DCC_zwlc2:749879144468185159>")
+    await channel.send("""<a:emoji:762541779663847474> Chào mừng  {user} đến với <a:emoji:762541779663847474> 
+<a:emoji:762541302298443827> **__DESTRUCTIVE CREATIONS | Community__** <a:emoji:762541302298443827> 
+<a:emoji:762541876711784479> <#.734919993073991711> để lấy màu siêu sịn
+<a:emoji:762541876711784479> <#.736992698619265154> để được quyền lợi
+<a:emoji:762541876711784479> <#.736991958467215370> để tránh bay màu
+                            <a:emoji:762541656259035147><a:emoji:762541668686757899>""")
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
