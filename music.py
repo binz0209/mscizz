@@ -479,12 +479,13 @@ bot.add_cog(Music(bot))
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel(734727263916130385)
-    await channel.send("""<a:emoji:762541779663847474> Chào mừng """+ member.mention +""" đến với <a:emoji:762541779663847474> 
-<a:emoji:762541302298443827> **__DESTRUCTIVE CREATIONS | Community__** <a:emoji:762541302298443827> 
-<a:emoji:762541876711784479> <#734919993073991711> để lấy màu siêu sịn
-<a:emoji:762541876711784479> <#736992698619265154> để được quyền lợi
-<a:emoji:762541876711784479> <#736991958467215370> để tránh bay màu
-                            <a:emoji:762541656259035147><a:emoji:762541668686757899>""")
+    await channel.send("""<a:CauVong:762673732807819275> Chào Mừng """+ member.mention +"""  đến với <a:CauVong:762673732807819275><a:tv:762673937292328981> DESTRUCTIVE CREATIONS | COMMUNITY<a:tv:762673937292328981> 
+
+     <a:ChamThan:762673717623914507> <#734919993073991711> để lấy màu siêu sịn
+     <a:ChamThan:762673717623914507> <#736992698619265154> để ủng hộ và được quyền lợi
+     <a:ChamThan:762673717623914507> <#736991958467215370> nhớ đọc luật để tránh bay màu nha
+
+                  <a:D:762673746556354580> <a:c:762673759009636373> <a:c_:762673759009636373> <a:welcome1:762673772259835945><a:welcome2:762673786361085992> <a:cloud:762673913057640489>""")
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
