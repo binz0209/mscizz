@@ -489,7 +489,7 @@ async def on_member_join(member):
         embed.set_thumbnail(url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
         embed.set_author(name="ĐÀI TRUYỀN HÌNH TIẾNG NÓI VIỆT NAM", icon_url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
 
-        channel = client.get_channel(763256876741427241)
+        channel = bot.get_channel(763256876741427241)
         await channel.send("**Welcome** " + member.mention)
 
         await channel.send( embed=embed)
