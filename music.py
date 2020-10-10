@@ -476,66 +476,24 @@ class Music(commands.Cog):
 bot = commands.Bot(description='Một bot nhạc cô đơn nào đó.', command_prefix=['B', 'b', '11'])
 bot.add_cog(Music(bot))
 
-@bot.event
+@client.event
 async def on_member_join(member):
-    channel = bot.get_channel(734727263916130385)
-    await channel.send("""<a:CauVong:762673732807819275> Chào Mừng """+ member.mention +"""  đến với <a:CauVong:762673732807819275><a:tv:762673937292328981> DESTRUCTIVE CREATIONS | COMMUNITY<a:tv:762673937292328981> 
+        embed = discord.Embed(
+            title = "WELCOME",
+            description = "**Chào mừng **" + member.mention + " **đã đến với Đài Truyền Hình Tiếng Nói Việt Nam** \n <#763256682372399114> **để đọc luật và react role nha!**",
+            colour = discord.Colour(0xff33ff)
+        )
 
-     <a:ChamThan:762673717623914507> <#734919993073991711> để lấy màu siêu sịn
-     <a:ChamThan:762673717623914507> <#736992698619265154> để ủng hộ và được quyền lợi
-     <a:ChamThan:762673717623914507> <#736991958467215370> nhớ đọc luật để tránh bay màu nha
+        embed.set_footer(text="ĐTH - TV")
+        embed.set_image(url="https://media.discordapp.net/attachments/619548575709396996/764537398464872479/image0_2.png?width=1043&height=587")
+        embed.set_thumbnail(url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
+        embed.set_author(name="ĐÀI TRUYỀN HÌNH TIẾNG NÓI VIỆT NAM", icon_url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
 
-                  <a:D:762673746556354580> <a:c:762673759009636373> <a:c_:762673759009636373> <a:welcome1:762673772259835945><a:welcome2:762673786361085992> <a:cloud:762673913057640489>""")
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
+        channel = client.get_channel(763256876741427241)
+        await channel.send("**Welcome** " + member.mention)
 
-    if message.content == 'ok':
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if message.content == 'Ok':
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-    if message.content == 'OK':
-        await message.add_reaction('<a:DCC_zchecked3:747301627014152233>')
-
-
-    if 'yeu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'love' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'yêu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'iu' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-    if 'luv' in message.content:
-        await message.add_reaction('<:DCC_yeune:747298048417464330>')
-
-    if 'chém' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'chem' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-    if 'chếm' in message.content:
-        await message.add_reaction('<:DCC_znhapnhay:747301623231152180>')
-
-    if message.content == 'binz':
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890> Bé Tư Chém <a:DCC_zdapchetmene:747301627890892890>''')
-    if message.content == 'Binz':
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-        await message.channel.send('''<a:DCC_zdapchetmene:747301627890892890> Bé Tư Chém <a:DCC_zdapchetmene:747301627890892890>''')
-    if 'bé tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Bé Tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'be tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Be tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Be Tu' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-    if 'Bé tư' in message.content:
-        await message.add_reaction('<:DCC_sohai2:747298047632867438>')
-
+        await channel.send( embed=embed)
+        
 @bot.event
 async def on_ready():
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
