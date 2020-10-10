@@ -485,7 +485,7 @@ async def on_member_join(member):
         )
 
         embed.set_footer(text="ĐTH - TV")
-        embed.set_image(url="https://media.discordapp.net/attachments/619548575709396996/764537398464872479/image0_2.png?width=1043&height=587")
+        embed.set_image(url="https://media.discordapp.net/attachments/619548575709396996/764548000642236466/12qqqe1.png")
         embed.set_thumbnail(url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
         embed.set_author(name="ĐÀI TRUYỀN HÌNH TIẾNG NÓI VIỆT NAM", icon_url="https://media.discordapp.net/attachments/619548575709396996/764075472354803752/imDTHage0.png")
 
